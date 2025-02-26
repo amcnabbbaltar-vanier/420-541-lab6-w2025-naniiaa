@@ -26,14 +26,14 @@ public class GameManager : MonoBehaviour
         score++;
         Debug.Log("Score: " + score);
 
-        if (score >= targetScore)
+        /* if (score >= targetScore)
         {
             LoadNewScene();
-        }
+        } */
     }
 
-    void LoadNewScene()
+    public void LoadNextScene()
     {
-        SceneManager.LoadScene("VictoryScene"); // Use your new scene's name
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Use your new scene's name
     }
 }
